@@ -11,5 +11,4 @@ const Users = ({result}) => {
         
     )
 }
-
 export default Users

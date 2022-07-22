@@ -22,9 +22,6 @@ export default function Data() {
         });
     }, [ ]);
 
-console.log(result);
-
-
     return (
         <>
             <Users personas={result} />
