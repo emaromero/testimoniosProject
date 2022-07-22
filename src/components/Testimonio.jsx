@@ -5,7 +5,7 @@ function Testimonio({user}) {
 	return (
 		<>
 			<div className="contenedor-testimonio">
-				<img className="imagen-testimonio" src={user.imagen} alt="Foto de {user.nombre}" />
+				<img className="imagen-testimonio" src={user.imagen} alt={user.nombre} />
 				<div className="contenedor-texto-testimonio">
 					<p className="nombre-testimonio">{user.nombre} en {user.pais}</p>
 					<p className="cargo-testimonio">{user.cargo} en {user.empresa}</p>
@@ -16,4 +16,4 @@ function Testimonio({user}) {
 	)
 }
 
-export default Testimonio;
+export default Testimonio

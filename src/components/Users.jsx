@@ -1,11 +1,11 @@
 import React from 'react'
 import Testimonio from './Testimonio'
 
-const Users = ({result}) => {
+const Users = ({personas}) => {
     return (
         <>
             <div>
-                {result?.map(user => <Testimonio key={user.id} user={user} />)}
+                {personas?.map(user => <Testimonio key={user.id} user={user} />)}
             </div>
         </>
         

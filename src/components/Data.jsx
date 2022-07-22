@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react'
 import Users from './Users';
 
 export default function Data() {
-    const [personas, setPersonas] = useState([])
-    const [result, setResult] = useState([]);
+    const [personas, setPersonas] = useState([]);
     const [error, setError] = useState(false)
 
     useEffect(() => {
@@ -15,16 +14,16 @@ export default function Data() {
 
         getDocs(personasCollection)
             .then((snapshot) => {
-            setResult(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        })
-        .catch((error) => {
-            setError(error);
-        });
-    }, [ ]);
-
+                setPersonas(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            })
+            .catch((error) => {
+                setError(error);
+            });
+    }, []);
+    console.log(personas);
     return (
         <>
-            <Users personas={result} />
+            <Users personas={personas} />
         </>
     )
 }
