@@ -1,5 +1,5 @@
 import React from 'react'
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { collection, getDocs, getFirestore} from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import Users from './Users';
 
@@ -20,7 +20,7 @@ export default function Data() {
                 setError(error);
             });
     }, []);
-    console.log(personas);
+
     return (
         <>
             <Users personas={personas} />

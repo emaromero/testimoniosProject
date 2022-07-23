@@ -1,5 +1,7 @@
 import './App.css';
+import Data from './components/Data';
 import Testimonio from "./components/Testimonio"
+import Users from './components/Users';
 
 function App() {
   return (
@@ -7,7 +9,9 @@ function App() {
       <div className="App">
         <div className="contenedor-principal">
           <h1>Esto es lo que dicen nuestros alumnos</h1>
-          <Testimonio />
+          <Data />
+          <Users/>
+<Testimonio/>
         </div>
       </div>
     </>

@@ -7,7 +7,9 @@ const Users = ({personas}) => {
             <div>
                 {personas?.map(user => <Testimonio key={user.id} user={user} />)}
             </div>
+
         </>
+        
         
     )
 }
