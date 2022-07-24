@@ -1,11 +1,10 @@
 import React from 'react'
-import { collection, getDocs, getFirestore} from 'firebase/firestore'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import { useEffect, useState } from 'react'
 import Users from './Users';
 
 export default function Data() {
     const [personas, setPersonas] = useState([]);
-    const [error, setError] = useState(false)
 
     useEffect(() => {
         const db = getFirestore()
@@ -17,9 +16,18 @@ export default function Data() {
                 setPersonas(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
             })
             .catch((error) => {
-                setError(error);
+                console.log(error);
             });
-    }, []);
+    }, [ ]);
+
+    // async function getPersonas(db) {
+    //     const personas = collection(db, 'personas');
+    //     const personasSnapshot = await getDocs(personas);
+    //     const personasList = personasSnapshot.docs.map(doc => doc.data());
+    //     return personasList;
+    // }
+
+    console.log(personas)
 
     return (
         <>
